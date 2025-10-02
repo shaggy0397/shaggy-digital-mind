@@ -9,26 +9,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Splash visual -->
   <h1>SH4C3Y digital mind</h1>
   <p>Tu asistente de memoria digital</p>
 
-  <section>
-    <label for="nota">Escribe o dicta tu nota:</label>
-    <input type="text" id="nota" placeholder="Ej: Vender Astro-1 a Juliana por $850..." />
-    <button onclick="guardarNota()">Guardar Nota</button>
-    <button onclick="verNotas()">Notas de Hoy</button>
-    <button onclick="grabarVoz()">Grabar Voz</button>
+  <!-- Gesto simbólico -->
+  <section class="gesto-sh4c3y">
+    <div class="mano">🤚</div>
+    <p>SH4C3Y recuerda cada nota con su mano digital. Dicta, apunta, guarda.</p>
   </section>
-
-  <section>
-    <h2>Habla con DEIMON</h2>
-    <div id="chat">
-      <p>¡Hola! Soy DEIMON. Tus notas se guardan automáticamente. ¿En qué te puedo ayudar hoy?</p>
-    </div>
-    <input type="text" id="pregunta" placeholder="O pregunta por las 'notas de hoy'" />
-    <button onclick="enviarPregunta()">Enviar</button>
-  </section>
-
-  <script src="app.js"></script>
-</body>
-</html>

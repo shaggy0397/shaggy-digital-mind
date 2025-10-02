@@ -1,11 +1,124 @@
-body { font-family: sans-serif; }
-.preview-box {
-  background: #1e293b;
-  border: 2px solid #06b6d4;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  margin-bottom: 2rem;
+/* Fondo y tipografía */
+body {
+  background-color: #121826;
+  font-family: 'Inter var', sans-serif;
+  color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
 }
-table { width: 100%; border-collapse: collapse; }
-th, td { padding: 0.5rem; border-bottom: 1px solid #334155; }
-thead { background: #0e7490; color: #a5f3fc; }
+
+/* Encabezado */
+h1 {
+  color: #a78bfa;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+p {
+  text-align: center;
+  color: #e5e7eb;
+  margin-bottom: 20px;
+}
+
+/* Secciones */
+section {
+  margin-bottom: 30px;
+}
+
+/* Input */
+input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #6366f1;
+  background-color: #1f2937;
+  color: #f9f9f9;
+}
+
+/* Botones primarios */
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button.primary {
+  background-color: #6366f1;
+  color: white;
+}
+button.primary:hover {
+  background-color: #4f46e5;
+}
+
+/* Botones secundarios */
+button.secondary {
+  background-color: #dc2626;
+  color: white;
+}
+button.secondary:hover {
+  background-color: #b91c1c;
+}
+
+/* Botón de chat */
+button.chat {
+  background-color: #22c55e;
+  color: white;
+}
+button.chat:hover {
+  background-color: #16a34a;
+}
+
+/* Vista previa */
+.preview {
+  background-color: #1f2937;
+  padding: 10px;
+  border-radius: 6px;
+}
+.preview p {
+  margin: 5px 0;
+  color: #4ade80;
+}
+
+/* Tabla de ventas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #374151;
+}
+th {
+  color: #a78bfa;
+}
+td.total {
+  color: #4ade80;
+}
+
+/* Gesto simbólico */
+.gesto-sh4c3y {
+  text-align: center;
+  margin-top: 30px;
+}
+.gesto-sh4c3y .mano {
+  font-size: 3em;
+  animation: latido 2s infinite;
+}
+.gesto-sh4c3y p {
+  font-style: italic;
+  color: #00ffff;
+  margin-top: 10px;
+}
+
+@keyframes latido {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
