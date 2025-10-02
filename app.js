@@ -1,29 +1,32 @@
+// 🧠 Filtro sintomático para dictado
 function limpiarDictado(texto) {
-  const palabras = texto.split(' ');
-  return palabras.filter((p, i) => p !== palabras[i - 1]).join(' ');
+  return texto
+    .replace(/\b(\w+)\b(?=\s+\1\b)/gi, '') // elimina repeticiones consecutivas
+    .replace(/\s{2,}/g, ' ') // elimina espacios dobles
+    .trim();
 }
 
-async function procesarConDEIMON(textoOriginal) {
-  const textoLimpio = limpiarDictado(textoOriginal);
-  const resultado = await gemini.extract(textoLimpio, {
-    cliente: { type: "STRING" },
-    productos: { type: "ARRAY", items: { type: "STRING" } },
-    total: { type: "NUMBER" },
-    estado: { type: "STRING", enum: ["Pagado", "Pendiente"] }
-  });
-  actualizarVistaPrevia(resultado);
-  registrarVenta(resultado);
+// 🧾 Guardar nota con filtro aplicado
+function guardarNota() {
+  const nota = document.getElementById('nota').value;
+  const notaLimpia = limpiarDictado(nota);
+  console.log("Guardando:", notaLimpia);
+  // Aquí puedes guardar en localStorage, backend o mostrar en pantalla
 }
 
-function actualizarVistaPrevia(data) {
-  document.getElementById('preview-cliente').textContent = data.cliente || '--';
-  document.getElementById('preview-productos').textContent = data.productos?.join(', ') || '--';
-  document.getElementById('preview-total').textContent = `$${data.total?.toFixed(2) || '0.00'}`;
-  document.getElementById('preview-estado').textContent = data.estado || '--';
+// 📅 Ver notas del día
+function verNotas() {
+  console.log("Mostrando notas de hoy...");
 }
 
-function registrarVenta(data) {
-  const fila = document.createElement('tr');
-  fila.innerHTML = `<td>${data.cliente}</td><td>$${data.total.toFixed(2)}</td>`;
-  document.getElementById('sales-log-body').appendChild(fila);
+// 🎙️ Activar dictado por voz
+function grabarVoz() {
+  console.log("Iniciando grabación...");
+  // Aquí puedes integrar Web Speech API
+}
+
+// 🤖 Preguntar a DEIMON
+function enviarPregunta() {
+  const pregunta = document.getElementById('pregunta').value;
+  console.log("DEIMON responde a:", pregunta);
 }
