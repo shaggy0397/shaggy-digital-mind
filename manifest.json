@@ -1,21 +1,13 @@
-{
-  "name": "SHAGGY digital mind",
-  "short_name": "SHAGGY",
+{{
+  "name": "Shaggy digital mind",
+  "short_name": "Shaggy",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#111827",
-  "theme_color": "#4f46e5",
-  "description": "Asistente táctil repo-ready con voz, notas y chat Gemini.",
+  "background_color": "#0f172a",
+  "theme_color": "#06b6d4",
+  "description": "Tu asistente táctil para registrar ventas con validación sintomática.",
   "icons": [
-    {
-      "src": "https://placehold.co/192x192/4f46e5/ffffff?text=D",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "https://placehold.co/512x512/4f46e5/ffffff?text=D",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }
