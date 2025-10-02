@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <!-- Splash visual -->
+  <!-- Encabezado -->
   <h1>SH4C3Y digital mind</h1>
   <p>Tu asistente de memoria digital</p>
 
@@ -40,7 +40,7 @@
 
   <!-- Registro de ventas -->
   <section>
-    <h2>2. Registro de Ventas (8)</h2>
+    <h2>2. Registro de Ventas</h2>
     <table>
       <tr>
         <th>Fecha</th>
@@ -70,18 +70,4 @@
   <!-- Chat con DEIMON -->
   <section>
     <h2>4. Habla con DEIMON</h2>
-    <p>¡Hola! Soy DEIMON. Estoy listo para registrar y analizar tus ventas en tiempo real.</p>
-    <input type="text" id="pregunta" placeholder="Ej: ¿Qué ha pedido Julián?" />
-    <button class="chat" onclick="enviarPregunta()">Enviar</button>
-  </section>
-
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
-      .then(() => console.log('✅ Service Worker registrado'))
-      .catch(error => console.error('❌ Error al registrar SW:', error));
-  }
-</script>
-
-</body>
-</html>
+    <p>¡Hola! Soy DEIMON. Estoy listo para registrar y analizar tus ventas
