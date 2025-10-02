@@ -1,6 +1,6 @@
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open('shaggy-cache').then(cache => {
+   caches.open('shaggy-cache-v2').then(cache => {
       return cache.addAll([
         './',
         './index.html',
