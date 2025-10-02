@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<!-- Validación: dashboard cargado correctamente -->
   <!-- Encabezado -->
   <h1>SH4C3Y digital mind</h1>
   <p>Tu asistente de memoria digital</p>
@@ -71,4 +70,19 @@
   <!-- Chat con DEIMON -->
   <section>
     <h2>4. Habla con DEIMON</h2>
-    <p>¡Hola! Soy DEIMON. Estoy listo para registrar y analizar tus ventas
+    <p>¡Hola! Soy DEIMON. Estoy listo para registrar y analizar tus ventas en tiempo real.</p>
+    <input type="text" id="pregunta" placeholder="Ej: ¿Qué ha pedido Julián?" />
+    <button class="chat" onclick="enviarPregunta()">Enviar</button>
+  </section>
+
+  <!-- Registro del Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(() => console.log('✅ Service Worker registrado'))
+        .catch(error => console.error('❌ Error al registrar SW:', error));
+    }
+  </script>
+
+</body>
+</html>
