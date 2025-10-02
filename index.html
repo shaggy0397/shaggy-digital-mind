@@ -3,34 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shaggy digital mind</title>
+  <meta name="theme-color" content="#00ffff" />
+  <title>SH4C3Y digital mind</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-gray-900 text-white p-4">
+<body>
+  <h1>SH4C3Y digital mind</h1>
+  <p>Tu asistente de memoria digital</p>
 
-  <!-- DEIMON Preview -->
-  <div id="deimon-preview" class="preview-box">
-    <h3>🧠 DEIMON Preview</h3>
-    <p>Cliente: <span id="preview-cliente">--</span></p>
-    <p>Productos: <span id="preview-productos">--</span></p>
-    <p>Total: <span id="preview-total">--</span></p>
-    <p>Estado: <span id="preview-estado">--</span></p>
-  </div>
+  <section>
+    <label for="nota">Escribe o dicta tu nota:</label>
+    <input type="text" id="nota" placeholder="Ej: Vender Astro-1 a Juliana por $850..." />
+    <button onclick="guardarNota()">Guardar Nota</button>
+    <button onclick="verNotas()">Notas de Hoy</button>
+    <button onclick="grabarVoz()">Grabar Voz</button>
+  </section>
 
-  <!-- Registro de Ventas -->
-  <h2>📋 Registro de Ventas</h2>
-  <table>
-    <thead><tr><th>Cliente</th><th>Total ($)</th></tr></thead>
-    <tbody id="sales-log-body"></tbody>
-  </table>
+  <section>
+    <h2>Habla con DEIMON</h2>
+    <div id="chat">
+      <p>¡Hola! Soy DEIMON. Tus notas se guardan automáticamente. ¿En qué te puedo ayudar hoy?</p>
+    </div>
+    <input type="text" id="pregunta" placeholder="O pregunta por las 'notas de hoy'" />
+    <button onclick="enviarPregunta()">Enviar</button>
+  </section>
 
   <script src="app.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js');
-    }
-  </script>
 </body>
 </html>
-
